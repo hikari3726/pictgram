@@ -8,6 +8,10 @@ class TopicsController < ApplicationController
     @topic = Topic.new
   end
   
+  def show
+    @topics = current_user.topics
+  end
+  
   def create
     @topic = current_user.topics.new(topic_params)
     if @topic.save
@@ -16,6 +20,12 @@ class TopicsController < ApplicationController
       flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
+  end
+  
+  def destroy
+    @topic = Topic.find_by(params[:id])
+    @topic.destroy
+    redirect_to topics_path, success: '投稿を削除しました'
   end
   
   private

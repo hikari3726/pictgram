@@ -106,6 +106,12 @@ h1, h2 {
   padding-top: 120px;
 }
 
+.favorite-comment {
+  padding-top: 100px;
+  text-align: center;
+  color: #808080;
+}
+
 .topic-index-wrapper {
   padding-top: 70px;
 　background-color: #fafafa;
@@ -143,6 +149,13 @@ h1, h2 {
       height: 30px;
       margin-left: 20px;
     }
+    
+    .topic-index-icon-box {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  
     
     .comment {
       font-size: 18px;
